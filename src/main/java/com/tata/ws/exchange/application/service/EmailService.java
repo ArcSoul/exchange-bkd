@@ -23,7 +23,7 @@ public class EmailService {
     public void sendEmail(String email) {
         // Genera el token único y el mensaje de correo electrónico
         String token = jwtUtil.generateResetToken(email);
-        String resetUrl = frontendPath + "/pages/auth/reset-password?token=" + token;
+        String resetUrl = frontendPath + "/reset-password?token=" + token;
 
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(email);
