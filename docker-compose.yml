@@ -9,8 +9,6 @@ services:
       - EXCHANGE_RATE_EMAIL_PASSWORD=${EXCHANGE_RATE_EMAIL_PASSWORD}
     ports:
       - "8080:8080"
-    depends_on:
-      - elasticsearch
 
   prometheus:
     image: prom/prometheus:latest
@@ -31,4 +29,3 @@ services:
       - grafana-storage:/var/lib/grafana  # Persistir datos de Grafana
 volumes:
   grafana-storage: { }
-  es-data: { }
