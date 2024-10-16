@@ -66,7 +66,7 @@ public class SecurityConfig {
         configuration.setMaxAge(3600L);  // Tiempo en que la respuesta preflight es cacheada
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/", configuration);
+        source.registerCorsConfiguration("/**", configuration);
         return source;
     }
 }
